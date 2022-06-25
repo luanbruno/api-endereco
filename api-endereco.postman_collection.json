@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "0f339ac5-dc3a-4d19-a9c8-c6ed35f56965",
+		"name": "api-endereco",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19676201"
+	},
+	"item": [
+		{
+			"name": "endereco-listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/endereco/listar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"endereco",
+						"listar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "endereco-excluir",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/endereco/:id/excluir",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"endereco",
+						":id",
+						"excluir"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "endereco-incluir",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"cep\": \"2654256554\",\r\n        \"logradouro\": \"nova cidade\",\r\n        \"complemento\": \"casa\",\r\n        \"bairro\": \"luz\",\r\n        \"localidade\": \"rio de janeiro\",\r\n        \"uf\": \"rj\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/endereco/incluir",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"endereco",
+						"incluir"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "endereco-obterPorCep",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/endereco/:cep",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"endereco",
+						":cep"
+					],
+					"variable": [
+						{
+							"key": "cep",
+							"value": "265456554"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
